@@ -8,8 +8,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.baracho.payroll.entities.Worker;
 
+
 @Component
-@FeignClient(name = "worker", url = "localhost:8001", path = "/workers")
+@FeignClient(name = "worker", path = "/workers")
 public interface WorkerFeignClient {
 	
 	@GetMapping(value = "/{id}")
